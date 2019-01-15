@@ -12,10 +12,10 @@ $access_token = 'laPW/iR3nJnUzSz4N5dgclPEyMz7OweaxYcabOeAp5zKJOQqNcILTb5sQ1jAFMY
 $content = file_get_contents('php://input');
 // Parse JSON
 
-var_dump($content);
-exit;
-
 $events = json_decode($content, true);
+
+var_dump($events);
+exit();
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
 	// Loop through each event
