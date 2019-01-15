@@ -7,11 +7,14 @@ require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 $access_token = 'laPW/iR3nJnUzSz4N5dgclPEyMz7OweaxYcabOeAp5zKJOQqNcILTb5sQ1jAFMYMPd9SZ4ssq6CzJHm1+CiLNEaD1TGTUR+cXYhmorpmO1ZT7S1cOVbTy4CZfHygQAL/vpfevlBCnEPv+OBN4y9BOQdB04t89/1O/w1cDnyilFU=
 ';
 
-var_dump($access_token);
-exit;
+
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
+
+var_dump($content);
+exit;
+
 $events = json_decode($content, true);
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
