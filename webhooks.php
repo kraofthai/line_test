@@ -14,8 +14,7 @@ $content = file_get_contents('php://input');
 
 $events = json_decode($content, true);
 
-var_dump($events);
-exit();
+
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
 	// Loop through each event
